@@ -27,6 +27,7 @@ class App extends Component {
       searchInput: "",
       // later on we can determine whether to add additional parameters like page size, genres, etc.
       searchURL: "",
+      gallery : []
     };
   }
   handleChange = (event) => {
@@ -55,12 +56,16 @@ class App extends Component {
             return response.json();
           })
           .then(
-            (json) => console.log(json),
+            (json) => this.setState({
+              gallery : json.results
+            }),
             (err) => console.log(err)
           );
       }
     );
   };
+  displayGallery = (gallery) => {
+  }
   render() {
     return (
       <div>
@@ -75,6 +80,9 @@ class App extends Component {
           />
           <input type="submit" value="Find Games" />
         </form>
+        <div id='gallery'>
+          {this.state.gallery.map(function(d, idx){return (<li key={idx}>{d.name}</li>)})}
+        </div>
       </div>
     );
   }
