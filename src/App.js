@@ -1,6 +1,15 @@
 import React, { Component } from "react";
 
-//checking if changes to branch worked -Alisson
+// linking to backend here vvvv
+let baseURL = "";
+
+if (process.env.NODE_ENV === "development") {
+  baseURL = "http://localhost:3003";
+} else {
+  baseURL = "your heroku backend url here";
+}
+
+console.log("current base URL:", baseURL);
 
 class App extends Component {
   constructor(props) {
