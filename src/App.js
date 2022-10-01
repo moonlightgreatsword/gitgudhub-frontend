@@ -3,6 +3,8 @@ import './App.css';
 import ReactDOM from 'react-dom/client'
 import Nav from './Nav'
 import Search from './Search'
+import { Route, Routes, Link, Router } from 'react-router-dom';
+import NavBar from './NavBar'
 
 // linking to backend here vvvv
 let baseURL = "";
@@ -14,11 +16,16 @@ if (process.env.NODE_ENV === "development") {
 }
 
 function App() {
+
   return (
     <div className="App">
       <div id="root">
-        <Nav />
-        <Search />
+        <NavBar />
+        <Routes>
+          <Route exact path="/" element={<Search />} />
+          {/* <Router path='/:selected' component={SelectedGame} />
+          <Router exact  path='/reviewed' component={Reviewed} /> */}
+        </Routes>
       </div>
     </div>
   );
