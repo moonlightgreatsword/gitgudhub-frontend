@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom/client'
 import Search from './Search'
 import { Route, Routes, Link, Router } from 'react-router-dom';
 import NavBar from './NavBar'
+import Selected from './Selected'
+
 
 // linking to backend here vvvv
 let baseURL = "";
@@ -22,8 +24,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route exact path="/" element={<Search />} />
-          {/* <Router path='/:selected' component={SelectedGame} />
-          <Router exact  path='/reviewed' component={Reviewed} /> */}
+          <Route path='/selected/:name' element={<Selected />} />
         </Routes>
       </div>
     </div>
