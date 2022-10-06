@@ -10,7 +10,7 @@ class AddForm extends React.Component {
             gameId: props.id, 
             released:props.released,
             metacritic:props.metacritic,
-            backround_image:props.backround_image
+            backround_image:props.background_image
         }
     }
 
@@ -39,7 +39,7 @@ class AddForm extends React.Component {
                 gameId: this.props.id, 
                 released:this.props.released,
                 metacritic:this.props.metacritic,
-                backround_image:this.props.backround_image
+                backgroundImage:this.props.background_image
             }),
             headers: {
                 'Content-Type': 'application/json'

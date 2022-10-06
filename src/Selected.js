@@ -28,7 +28,7 @@ const Selected = (props) => {
         id={game.id} 
         released={game.released}
         metacritic={game.metacritic}
-        backround_image={game.background_image}
+        background_image={game.background_image}
         />
       </div>
     );
