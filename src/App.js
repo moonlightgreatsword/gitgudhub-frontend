@@ -11,7 +11,8 @@ import Selected from './Selected'
 let baseURL = "";
 
 if (process.env.NODE_ENV === "development") {
-  baseURL = "http://localhost:3003";
+  // baseURL = "http://localhost:3003";
+  baseURL = process.env.REACT_APP_BACKEND_URL
 } else {
   baseURL = "your heroku backend url here";
 }
