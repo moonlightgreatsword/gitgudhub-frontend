@@ -36,3 +36,59 @@
     transform: rotate(360deg);
   }
 }
+
+ul {
+  list-style-type: none;
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+img {
+  height: 200px;
+  width: auto;
+}
+
+.Game-Info {
+  /* background-color: yellow ; */
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.Game-Info>img {
+  width: 200px;
+  height: auto;
+}
+
+.review-info {
+  /* width: 300px;
+  height: auto; */
+  display: flex;
+  /* background-color: #61dafb; */
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.review-info li {
+  width: 350px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  border: thick double #32a1ce;
+}
+
+#display-review {
+  display:flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#display-review>img {
+  width: 300px;
+  height: auto;
+}

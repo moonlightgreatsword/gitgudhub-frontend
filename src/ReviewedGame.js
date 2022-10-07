@@ -40,14 +40,16 @@ const ReviewedGame = (props) => {
    
     console.log(game._id)
     return (
-      <div>
+      <div id="display-review">
         <h1>{game.name}</h1>
+        <img src={game.backgroundImage} alt='screenshot'></img>
         <p>Released: {game.released}</p>
         <p>Metacritic Rating: {game.metacritic}</p>
         <h3>Review(s):</h3>
+        <ul className='review-info'>
           { 
             game.reviews.map(review => (
-                <li key={review._id}>
+                <li key={review._id} className="lineitem">
                     <p>Author: {review.author}</p>
                     <p>Description: {review.description}</p>
                     <form id = 'deleteReview' action='/reviewed'>
@@ -57,14 +59,10 @@ const ReviewedGame = (props) => {
                         <input type="text" name="description" id="description" placeholder={'Edit Here'} onChange={handleChange} required/>
                         <input type="submit" value="SUBMIT EDIT" onClick={() => editReview(game, review)} />
                     </form>
-                    {/* <form id='editReview' action={`${process.env.REACT_APP_BACKEND_URL}/games/${review.gameId}/${review._id}/update?_method=PUT`} method="POST">
-                        <input type="text" name="description" id="description" placeholder={'Edit Here'} required/>
-                        <input type="submit" value="SUBMIT EDIT"  />
-                    </form> */}
                 </li>
             ))
           }
-        <img src={game.backgroundImage} alt='screenshot'></img>
+        </ul>
       </div>
     );
   }

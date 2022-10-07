@@ -5,7 +5,7 @@ import AddForm from './AddForm';
 const Selected = (props) => {
     const game = useLocation().state.game
     return (
-      <div>
+      <div className='Game-Info'>
         <h1>{game.name}</h1>
         <p>Released: {game.released}</p>
         <p>Metacritic Rating: {game.metacritic}</p>
