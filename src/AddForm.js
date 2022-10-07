@@ -60,7 +60,7 @@ class AddForm extends React.Component {
     }
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit} >
                 <input type="hidden" name="name" id="name" value={this.state.name}/>
                 <input type="hidden" name="" id="gameId"  value={this.state.id}/>
                 <input type="hidden" name="released" id="released"  value={this.state.released}/>

@@ -5,6 +5,8 @@ import Search from './Search'
 import { Route, Routes, Link, Router } from 'react-router-dom';
 import NavBar from './NavBar'
 import Selected from './Selected'
+import ReviewedGallery from './Reviewed'
+import ReviewedGame from './ReviewedGame'
 
 
 // linking to backend here vvvv
@@ -25,7 +27,9 @@ function App() {
         <NavBar />
         <Routes>
           <Route exact path="/" element={<Search />} />
-          <Route path='/selected/:name' element={<Selected />} />
+          <Route path='/selected/:id' element={<Selected />} />
+          <Route path='/reviewed' element={<ReviewedGallery />} />
+          <Route path='/reviewed/:id' element={<ReviewedGame />} />
         </Routes>
       </div>
     </div>
