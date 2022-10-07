@@ -39,7 +39,7 @@ const Search  = () => {
           <input type="submit" value="Find Games" />
         </form>
         <div className="results-container">
-          <ul>
+          <ul id="review-info">
           {gameResults.map(game => (
               <li key={game.id}>
                 <Link to={`/selected/${game.id}`} state={{ game }}>

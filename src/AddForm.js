@@ -51,26 +51,24 @@ class AddForm extends React.Component {
             }
             throw new Error(res)
         })
-        // .then(resJson => {
-        //     console.log('AddForm - resJson', resJson)
-        //     // this.props.handleAddHoliday(resJson)
-        //     this.setState({name: ''})
-        // })
         .catch((err) => {console.log(err)})
     }
     render() {
         return (
-            <form onSubmit={this.handleSubmit} >
-                <input type="hidden" name="name" id="name" value={this.state.name}/>
-                <input type="hidden" name="" id="gameId"  value={this.state.id}/>
-                <input type="hidden" name="released" id="released"  value={this.state.released}/>
-                <input type="hidden" name="metacritic" id="metacritic"  value={this.state.metacritic}/>
-                <input type="hidden" name="metacritic" id="metacritic"  value={this.state.metacritic}/>
-                <input type="hidden" name="background_image" id="background_image"  value={this.state.background_image}/>
-                <input type="text" name="author" id="author"  onChange={this.authorChange} placeholder='Enter Your Name Here' required/>
-                <input type="text" name="description" id="description"  onChange={this.descriptionChange} placeholder='Write Review Here' required/>
-                <input type="Submit" value="Add a Review" />
-            </form>
+            <div>
+                <form onSubmit={this.handleSubmit} id="addForm">
+                    <input type="hidden" name="name" id="name" value={this.state.name}/>
+                    <input type="hidden" name="" id="gameId"  value={this.state.id}/>
+                    <input type="hidden" name="released" id="released"  value={this.state.released}/>
+                    <input type="hidden" name="metacritic" id="metacritic"  value={this.state.metacritic}/>
+                    <input type="hidden" name="metacritic" id="metacritic"  value={this.state.metacritic}/>
+                    <input type="hidden" name="background_image" id="background_image"  value={this.state.background_image}/>
+                    <input type="text" name="author" id="author"  onChange={this.authorChange} placeholder='Enter Your Name Here' required/>
+                    {/* <input type="text" name="description" id="description"  onChange={this.descriptionChange} placeholder='Write Review Here' required/> */}
+                    <input type="Submit" value="Add a Review" />
+                </form>
+                <textarea rows="4" cols="50" name="description" form="addForm" onChange={this.descriptionChange} placeholder='Enter Your Name Here' required></textarea>
+            </div>
         )
     }
 }
