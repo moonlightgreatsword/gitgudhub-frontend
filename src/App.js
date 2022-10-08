@@ -12,12 +12,7 @@ import ReviewedGame from './ReviewedGame'
 // linking to backend here vvvv
 let baseURL = "";
 
-if (process.env.NODE_ENV === "development") {
-  // baseURL = "http://localhost:3003";
-  baseURL = process.env.REACT_APP_BACKEND_URL
-} else {
-  baseURL = "your heroku backend url here";
-}
+baseURL = process.env.REACT_APP_BACKEND_URL
 
 function App() {
 
