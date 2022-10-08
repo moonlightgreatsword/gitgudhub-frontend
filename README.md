@@ -33,6 +33,13 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
+
+### Project Approach
+
+Our project utilizes both API and backendend database calls to display data for the pages.  Initially, the data is displayed from an API when the user searches for games. Once a game is selected, the user is taken to a view page for that game where they can write a review. Once a review is submitted, the game data and the review are added to the backend database. The User can then see the "reviewed items" in a gallery that is displaying data from the backend. 
+
+All page routes were handled in the frontend utilizing react router. 
+
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
