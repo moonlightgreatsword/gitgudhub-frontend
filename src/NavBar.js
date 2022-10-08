@@ -6,7 +6,7 @@ function NavBar() {
     return ( 
         <ul>
             <li><Link to='/'>Home</Link></li>
-            <li><Link to='/games/reviewed'>Reviewed Gallery</Link></li>
+            <li><Link to='/reviewed'>Reviewed Gallery</Link></li>
         </ul>
     )
 }
