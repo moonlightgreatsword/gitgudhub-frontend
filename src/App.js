@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import ReactDOM from 'react-dom/client'
-import Nav from './Nav'
 import Search from './Search'
 import { Route, Routes, Link, Router } from 'react-router-dom';
 import NavBar from './NavBar'
