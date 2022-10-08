@@ -63,11 +63,11 @@ class AddForm extends React.Component {
                     <input type="hidden" name="metacritic" id="metacritic"  value={this.state.metacritic}/>
                     <input type="hidden" name="metacritic" id="metacritic"  value={this.state.metacritic}/>
                     <input type="hidden" name="background_image" id="background_image"  value={this.state.background_image}/>
-                    <input type="text" name="author" id="author"  onChange={this.authorChange} placeholder='Enter Your Name Here' required/>
+                    <input type="text" name="author" id="author"  onChange={this.authorChange} placeholder='Enter your name' required/>
                     {/* <input type="text" name="description" id="description"  onChange={this.descriptionChange} placeholder='Write Review Here' required/> */}
                     <input type="Submit" value="Add a Review" />
                 </form>
-                <textarea rows="4" cols="50" name="description" form="addForm" onChange={this.descriptionChange} placeholder='Enter Your Name Here' required></textarea>
+                <textarea rows="4" cols="50" name="description" form="addForm" onChange={this.descriptionChange} placeholder='Add your review!' required></textarea>
             </div>
         )
     }
